@@ -73,12 +73,91 @@ function inventory() {
                 );
             }
             console.log("");
-            console.log(chalk.blue("================================ CURRENT BAMAZON PRODUCTS FOR SALE ====================================="));
+            console.log(chalk.blue("================================ ") + chalk.yellowBright("CURRENT BAMAZON PRODUCTS FOR SALE") + chalk.blue(" ====================================="));
             console.log("");
-            console.log(table.toString());
+            console.log(chalk.greenBright(table.toString()));
             console.log("");
-            connection.end();
-            // continuePrompt();
+            // connection.end();
+            continuePrompt();
         });
     }
+}
+
+//=================================  buyer Purchase  ===============================
+function continuePrompt() {
+    inquirer.prompt([{
+        type: "confirm",
+        name: "continue",
+        message: "Would you like to purchase an item?",
+        default: true
+    }])
+        .then(function (buyer) {
+            if (buyer.continue === true) {
+                selectionPrompt();
+            } else {
+                console.log("");
+                console.log(chalk.blueBright("==================================================="));
+                console.log(chalk.magentaBright("=========== ") + chalk.yellowBright("Thank you! Come back soon!") + chalk.magenta(" ============"));
+                console.log(chalk.greenBright("==================================================="));
+                console.log("");
+                console.log("");
+                console.log("");
+                start();
+            }
+            // connection.end();
+        });
+}
+
+//=================================  Item selection and Quantity desired  ===============================
+function selectionPrompt() {
+    inquirer.prompt([{
+        type: "input",
+        name: "inputId",
+        message: "Please enter the item ID number of the Product you would like to purchase.",
+    },
+    {
+        type: "input",
+        name: "inputNumber",
+        message: "How many units of this item would you like to purchase?",
+    }
+    ])
+        .then(function (buyerPurchase) {
+            //connect to database to find stock_quantity in database. If buyer quantity input is greater than stock, decline purchase.
+            connection.query("SELECT * FROM products WHERE item_id=?", buyerPurchase.inputId, function (err, results) {
+                for (var i = 0; i < results.length; i++) {
+
+                    if (buyerPurchase.inputNumber > results[i].stock_quantity) {
+                        console.log("");
+                        console.log(chalk.magentaBright("====================================================="));
+                        console.log(chalk.redBright("Sorry! Not enough in stock. ") + chalk.greenBright(" Please try again later."));
+                        console.log(chalk.magentaBright("====================================================="));
+                        console.log("");
+                        console.log("");
+                        console.log("");
+                        start();
+
+                    } else {
+                        //list item information for buyer for confirm prompt
+                        console.log("");
+                        console.log(chalk.blueBright("==================================================="));
+                        console.log(chalk.yellowBright("Great News!!! ") + chalk.greenBright("We can fulfill your order right away."));
+                        console.log(chalk.blueBright("==================================================="));
+                        console.log(chalk.magenta("You have selected:"));
+                        console.log(chalk.yellowBright("------------------"));
+                        console.log(chalk.red("Item: ") + chalk.green(results[i].product_name));
+                        console.log(chalk.red("Department: ") + chalk.green(results[i].department_name));
+                        console.log(chalk.red("Price: ") + chalk.green(results[i].price));
+                        console.log(chalk.red("Quantity: ") + chalk.green(buyerPurchase.inputNumber));
+                        console.log(chalk.yellowBright("------------------"));
+                        console.log(chalk.cyanBright("Total: ") + chalk.magenta(results[i].price * buyerPurchase.inputNumber));
+                        console.log(chalk.yellowBright("------------------"));
+                        console.log("");
+                        var newStock = (results[i].stock_quantity - buyerPurchase.inputNumber);
+                        var purchaseId = (buyerPurchase.inputId);
+                        confirmPrompt(newStock, purchaseId);
+                        connection.end();
+                    }
+                }
+            });
+        });
 }
