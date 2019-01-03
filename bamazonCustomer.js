@@ -155,9 +155,47 @@ function selectionPrompt() {
                         var newStock = (results[i].stock_quantity - buyerPurchase.inputNumber);
                         var purchaseId = (buyerPurchase.inputId);
                         confirmPrompt(newStock, purchaseId);
-                        connection.end();
+                        // connection.end();
                     }
                 }
             });
+        });
+}
+
+//=================================  Confirm Purchase  ===============================
+function confirmPrompt(newStock, purchaseId) {
+    inquirer.prompt([{
+        type: "confirm",
+        name: "confirmPurchase",
+        message: "Are you sure you would like to purchase this item and quantity?",
+        default: true
+    }])
+        .then(function (buyerConfirm) {
+            if (buyerConfirm.confirmPurchase === true) {
+                //if buyer confirms purchase, update mysql database with new stock quantity by subtracting buyer quantity purchased.
+                connection.query("UPDATE products SET ? WHERE ?", [{
+                    stock_quantity: newStock
+                }, {
+                    item_id: purchaseId
+                }])
+                // function (err, results) {});
+                console.log("");
+                console.log(chalk.redBright("===================================================="));
+                console.log(chalk.greenBright("Transaction completed. ") + chalk.yellowBright("Thanks Alot! ") + chalk.blueBright("Come Again Soon."));
+                console.log(chalk.magentaBright("===================================================="));
+                console.log("");
+                console.log("");
+                console.log("");
+                start();
+            } else {
+                console.log("");
+                console.log(chalk.blueBright("==================================================="));
+                console.log(chalk.magentaBright("========== ") + chalk.yellowBright("No worries...Maybe next time!") + chalk.magentaBright(" =========="));
+                console.log(chalk.greenBright("==================================================="));
+                console.log("");
+                console.log("");
+                console.log("");
+                start();
+            }
         });
 }
