@@ -12,36 +12,37 @@ PRIMARY KEY (item_id)
 
 );
 
+DESCRIBE products;
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("beats studio 3 wireless headphone- red", "electronics", 279.99, 20);
+VALUES ("Beats Studio 3 Wireless Headphone - Red", "Electronics", 279.99, 20);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("jordan retro 1 t-shirt- white", "clothing", 34.99, 15);
+VALUES ("Jordan Retro 1 T-shirt - White", "Clothing", 34.99, 15);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("office 365 home & business", "software", 79.99, 5);
+VALUES ("Office 365 Home & Business", "Software", 79.99, 5);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("windows 10 pro", "software", 188.99, 3);
+VALUES ("Windows 10 Pro", "Software", 188.99, 3);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("supreme box logo t-shirt- black", "clothing", 99.99, 12);
+VALUES ("Supreme Box Logo T-shirt - Black", "Clothing", 99.99, 12);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("bose soundlink micro bluetooth speaker- black", "electronics", 108.99, 10);
+VALUES ("Bose Soundlink Bluetooth Speaker - Black", "Electronics", 108.99, 10);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("automatic vacuum air sealing system- silver", "appliances", 59.99, 8);
+VALUES ("Dyson Cordless Automatic Vacuum - Silver", "Appliances", 59.99, 8);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("bamazon egift cards", "gift cards", 50.00, 10);
+VALUES ("Bamazon Egift Cards", "Giftcards", 50.00, 10);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("coffee mug warmer for office/home use- black", "appliances", 9.99, 20);
+VALUES ("Coffee Mug Warmer for Office/Home use - Black", "Appliances", 9.99, 20);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("bamazon gift cards- print at home", "gift cards", 50.00, 10);
+VALUES ("Bamazon Gift Cards - Print at Home", "Giftcards", 50.00, 10);
 
 
 SELECT * FROM products;
