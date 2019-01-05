@@ -108,6 +108,7 @@ function continuePrompt() {
         });
 }
 
+
 //=================================  Item selection and Quantity desired  ===============================
 function selectionPrompt() {
     inquirer.prompt([{
@@ -119,13 +120,11 @@ function selectionPrompt() {
         type: "input",
         name: "inputNumber",
         message: "How many units of this item would you like to purchase?",
-    }
-    ])
+    }])
         .then(function (buyerPurchase) {
             //connect to database to find stock_quantity in database. If buyer quantity input is greater than stock, decline purchase.
             connection.query("SELECT * FROM products WHERE item_id=?", buyerPurchase.inputId, function (err, results) {
-                for (var i = 0; i < results.length; i++) {
-
+                for (var i = 0; i < results.length; i++)
                     if (buyerPurchase.inputNumber > results[i].stock_quantity) {
                         console.log("");
                         console.log(chalk.magentaBright("====================================================="));
@@ -157,7 +156,7 @@ function selectionPrompt() {
                         confirmPrompt(newStock, purchaseId);
                         // connection.end();
                     }
-                }
+
             });
         });
 }
@@ -198,4 +197,5 @@ function confirmPrompt(newStock, purchaseId) {
                 start();
             }
         });
+
 }
