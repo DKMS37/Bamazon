@@ -60,9 +60,10 @@ function start() {
                         console.log("");
                         console.log("");
                         console.log("");
-                        newTransaction();
+                        // newTransaction();
                         connection.end();
                     });
                 }
             }
-            
+        })
+}
