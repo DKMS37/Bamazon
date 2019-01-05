@@ -60,10 +60,34 @@ function start() {
                         console.log("");
                         console.log("");
                         console.log("");
-                        // newTransaction();
-                        connection.end();
+                        newTransaction();
+                        // connection.end();
                     });
                 }
             }
+            //=================================  List Of Transactions to be Perform ===============================           
+            function newTransaction() {
+                inquirer.prompt([{
+                    type: 'confirm',
+                    name: 'choice',
+                    message: 'Would you like to perform another transaction?'
+                }]).then(function (answer) {
+                    if (answer.choice) {
+                        start();
+                    }
+                    else {
+                        console.log(chalk.redBright("==============================================="));
+                        console.log(chalk.greenBright("Thank You So Much! ") + chalk.yellowBright("Wishing You ") + chalk.blueBright("A Wonderful Day!"));
+                        console.log(chalk.magentaBright("==============================================="));
+                        console.log("");
+                        console.log("");
+                        console.log("");
+                        connection.end();
+                        console.log("");
+
+                    }
+                })
+            }
         })
 }
+
