@@ -150,7 +150,8 @@ the following information will output to your terminal/bash window:
       HE/SHE can now input whatever quantity to add to the selected item.
 
   * To verify that the app is working and communicating to the MySQL database, 
-    compare the two My SQL images, the image UP and the image BELOW:
+    compare the two My SQL images, the image UP and the image BELOW.
+      
       BEFORE:
       ```
        * "Item ID: 3
@@ -165,10 +166,10 @@ the following information will output to your terminal/bash window:
       ```     
     ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_database_lowInventory_Added_06.PNG)
 
-If the manager wants to check if the item did actually restock 
-and made the "2nd" selection again "View low Inventory". 
+If the manager wants to check if the item did actually restock, 
+and made the "2nd" selection again, the "View low Inventory". 
 The image BELOW shows that the item Restocked is now "GONE" 
-from the "BAMAZON LOW PRODUCT INVENTORY TABLE.
+from the "BAMAZON LOW PRODUCT INVENTORY TABLE".
 
    ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_addMoreToInventory_confirmed_07.PNG)
 
