@@ -94,7 +94,7 @@ If BAMAZON takes the command or you type in the terminal below:
       ```
        * Hello Manager! What would you like to do today?    
       ```
-      then it prompt the manager to 4 selection:
+      then it will prompt the manager to 4 selection:
       ```
        * 1.) View Products for sale
        * 2.) View low inventory 
@@ -112,6 +112,29 @@ the following information will output to your terminal/bash window:
       ```
        * Would you like to perform another transaction?    
       ```
+If the manager Typed in "YES" and made the "2nd" selection "View low inventory", 
+the following information will output to your terminal/bash window:
+
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_viewLowInventory_03.PNG)
+
+* To verify that the app is working and communicating to the MySQL database, 
+compare the two images, the image UP and the image below:
+      ```
+       * "Item ID: 3 "OFFICE 365 HOME & BUSINESS" STOCK REMAINING are BOTH "0" on BOTH Images. 
+      ``` 
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_database_lowInventory_04.PNG)    
+
+
+* And then the Bamazon App will automatically go back to prompt where it says:
+      ```
+       * Would you like to perform another transaction?    
+      ```  
+If the manager Typed in "YES" and made the "3rd" selection "Add to inventory", 
+the following information will output to your terminal/bash window:
+
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_addMoreToInventory_05.PNG)
+
+
 
 
 
