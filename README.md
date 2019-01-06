@@ -5,27 +5,27 @@ Bamazon is an Amazon-like storefront app that will take in orders from customers
 
 ### What BAMAZON Can Do
 
-if BAMAZON takes the command or you type in the terminal below:
+If BAMAZON takes the command or you type in the terminal below:
 `node bamazonCustomer.js`
 
  * This will output the following information to your terminal/bash window:
       ```
        * Welcome to Bamazon! Would you like to view our current products fo sale?    
       ```
-      if the user typed in "YES", the following information will output to your terminal/bash window:
+If the user typed in "YES", the following information will output to your terminal/bash window:
 
  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonCustomer_1.PNG)
 
-after the products has been displayed. it will then prompt the user to the following question:
+After the products has been displayed. it will then prompt the user to the following question:
       ```
        * Would you like to purchase an item?    
       ```
-      if the user typed in "NO", it will give an output "Thank you! Come back soon!"
-      And then the Bamazon App will automatically go back to start where it says:
+If the user typed in "NO", it will give an output "Thank you! Come back soon!"
+And then the Bamazon App will automatically go back to start where it says:
       ```
        * Welcome to Bamazon! Would you like to view our current products fo sale?    
       ```
-*Yet if the user typed in "YES" this will output the following prompts to your terminal/bash window:
+  * Yet if the user typed in "YES" this will output the following prompts to your terminal/bash window:
       ```
        * Please Enter the item Id number of the product you would like to purchase?    
       ```
@@ -33,7 +33,7 @@ after the products has been displayed. it will then prompt the user to the follo
       ```
        * How many units of this item would you like to purchase?    
       ```
-      if the user input is morethan what the database or the stock quantity of the store the following information will output to your terminal/bash window:
+If the user input is morethan what the database or the stock quantity of the store the following information will output to your terminal/bash window:
 
 ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonCustomer_2.PNG)
 
