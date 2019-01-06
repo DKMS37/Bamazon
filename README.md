@@ -164,56 +164,64 @@ the following information will output to your terminal/bash window:
         "OFFICE 365 HOME & BUSINESS" 
         Stock Quantity: 5  
       ```     
-    ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_database_lowInventory_Added_06.PNG)
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_database_lowInventory_Added_06.PNG)
 
 If the manager wants to check if the item did actually restock, 
 and made the "2nd" selection again, the "View low Inventory". 
 The image BELOW shows that the item Restocked is now "GONE" 
 from the "BAMAZON LOW PRODUCT INVENTORY TABLE".
 
-   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_addMoreToInventory_confirmed_07.PNG)
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_addMoreToInventory_confirmed_07.PNG)
 
-     
+  * And then the Bamazon App will automatically go back to prompt where it says:
+      ```
+       * Would you like to perform another transaction?    
+      ```  
+If the manager Typed in "YES" and made the "4th" selection "Add new product", 
+the following information will output to your terminal/bash window:
+
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_addNewProductToInventory_08.PNG)
+
+  * And then the Bamazon App will automatically prompt the manager four qustions where it says:
+ 
+      ```
+       * What is the name and the descriptions of product you would like to stock?
+       * Which department this product belongs to?
+       * What is the retail price of this product?
+       * How many quantity you would like to add?
+      ```
+After all the inputs the manager's made. 
+Bamazon app will prompt a message:
+      ```
+       * Thank you! New Product has been Added!    
+      ```  
+We can verify that everything works fine by looking at the two images below:
+  
+  * this first image below shows we only have a total of "10" product_name
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_database_addNewProduct_9.PNG)
+  
+  * this second image below shows we have now a total of "11" product_name 
+    after the function has been fulfilled.
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_database_newProductAdded_Added_10.PNG) 
 
 
 
-   
-
-
-
-
-       
-
-
-
-
-
-
-
-
-
+  * Bamazon App will automatically go back to prompt where it says:
+      ```
+       * Would you like to perform another transaction?    
+      ```  
+If the manager type in "NO", Bamazon app will print the following to your terminal/bash window:
+      ```
+       * Thank You So Much! Wishing You A Wonderful Day!    
+      ```  
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_selections_NO_11.PNG) 
+    
 
 
 
 
 
-## Submission Guide
-
-Make sure you use the normal GitHub. Because this is a CLI App, there will be no need to deploy it to Heroku. This time, though, you need to include screenshots, a gif, and/or a video showing us that you got the app working with no bugs. You can include these screenshots or a link to a video in a `README.md` file.
-
-* Include screenshots (or a video) of typical user flows through your application (for the customer and if relevant the manager/supervisor). This includes views of the prompts and the responses after their selection (for the different selection options).
-
-* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers/other developers in the future what you built and why, and to show how it works. 
-
-* Because screenshots (and well-written READMEs) are extremely important in the context of GitHub, this will be part of the grading.
-
-If you haven't written a markdown file yet, [click here for a rundown](https://guides.github.com/features/mastering-markdown/), or just take a look at the raw file of these instructions.
-
-### Submission on BCS
-
-* Please submit the link to the Github Repository!
-
-## Instructions
+## Instructions on how to make Bamazon App
 
 ### Challenge #1: Customer View (Minimum Requirement)
 
@@ -323,11 +331,6 @@ If you haven't written a markdown file yet, [click here for a rundown](https://g
 
    * **HINT**: There may be an NPM package that can log the table to the console. What is it? Good question :)
 
-### Reminder: Submission on BCS
-
-* Please submit the link to the Github Repository!
-
-- - -
 
 ### Minimum Requirements
 
@@ -345,8 +348,3 @@ Add a `README.md` to your repository describing the project. Here are some resou
 
 - - -
 
-### One More Thing
-
-If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
-
-**Good Luck!**
