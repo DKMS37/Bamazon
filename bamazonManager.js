@@ -35,7 +35,7 @@ function start() {
                 var table = new Table({
                     head: ["Item ID", "Current Product for Sale", "Retail Price", "Stock Remaining"],
                     colWidths: [10, 60, 20, 20],
-                })
+                });
 
                 listInventory();
                 //================================= List Product Inventory  ===============================
@@ -127,7 +127,48 @@ function start() {
 
                             });
                     }
-                })
+                });
+            }
+            else if (manager.input === '4.) Add new product') {
+                inquirer.prompt([{
+                    name: "Name",
+                    type: "input",
+                    message: "What is the name and the descriptions of product you would like to stock?"
+                }, {
+                    name: "Department",
+                    type: "input",
+                    message: "Which department this product belongs to?"
+                }, {
+                    name: "Price",
+                    type: "input",
+                    message: "What is the retail price of this product?"
+                }, {
+                    name: "Quantity",
+                    type: "input",
+                    message: "How many quantity you would like to add?"
+                },
+                    //================================= Add New Product to Inventory  ===============================                
+                ]).then(function (answers) {
+                    var name = answers.Name;
+                    var Department = answers.Department;
+                    var price = answers.Price;
+                    var quantity = answers.Quantity;
+                    buildNewItem(name, Department, price, quantity)
+                    function buildNewItem() {
+                        connection.query('INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES("' + answers.Name + '","' + answers.Department + '","' + answers.Price + '","' + answers.Quantity + '")',
+                            function (err, res) {
+                                if (err) { console.log(err) }
+                                console.log("");
+                                console.log(chalk.blueBright("=================================================="));
+                                console.log(chalk.yellowBright("=== ") + chalk.magenta("Thank you! ") + chalk.greenBright("New Product has been Added!") + chalk.yellowBright(" ==="));
+                                console.log(chalk.blueBright("=================================================="));
+                                console.log("");
+                                console.log("");
+                                console.log("");
+                                newTransaction();
+                            });
+                    }
+                });
             }
             //=================================  List Of Transactions to be Perform ===============================           
             function newTransaction() {
@@ -147,10 +188,8 @@ function start() {
                         console.log("");
                         console.log("");
                         connection.end();
-                        console.log("");
-
                     }
-                })
+                });
             }
-        })
+        });
 }
