@@ -38,7 +38,7 @@ After the products has been displayed.
       ```
        * How many units of this item would you like to purchase?    
       ```
-If the user input is morethan what the database or the stock quantity of the store:
+If the user input a unit number that is "MORE THAN" what the database or the stock quantity of the store:
 
   * The following information will output to your terminal/bash window:
 
@@ -49,7 +49,37 @@ If the user input is morethan what the database or the stock quantity of the sto
        * Welcome to Bamazon! Would you like to view our current products fo sale?    
       ```
 
+If the user input a unit number that is "LESS THAN" or "EQUAL" what the database or the stock quantity of the store, It will then prompt the user to a confirmation question:
+      ```
+       * Are you sure you would like to purchase this item and quantity?    
+      ```
+      If the user answer is "YES", it will complete the order and will give a message:
+      ```
+       * Transaction completed. Thanks Alot! Come Again Soon.    
+      ```
+  * The following information will output to your terminal/bash window:
 
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonCustomer_4.PNG)
+
+  * And then the Bamazon App will automatically go back to start where it says:
+      ```
+       * Welcome to Bamazon! Would you like to view our current products fo sale?    
+      ```
+
+
+  * To verify that the app is working and communicating to the MySQL database, see the images below:
+       ```
+       * "BEFORE" the order was completed the stock quantity on the MYSQL database were "8" in total as you can see on the image below:  
+      ```
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonCustomer_4_database.PNG)
+
+       ```
+       * "AFTER" the order was completed the stock quantity on the MYSQL database is "1" in total as you can see on the image below:  
+      ```
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonCustomer_4_database_minus.PNG)
+
+
+      
 
 
 
