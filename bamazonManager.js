@@ -97,6 +97,38 @@ function start() {
                     });
                 }
             }
+            else if (manager.input === '3.) Add to inventory') {
+                inquirer.prompt([{
+                    name: "ID",
+                    type: "input",
+                    message: "What is the item id of the product you would like to restock?"
+                }, {
+                    name: "Quantity",
+                    type: "input",
+                    message: "How many quantity you would like to add?"
+                },
+                    //=================================  Add More Quantity to Low Product Inventory  ===============================               
+                ]).then(function (answers) {
+                    var quantityAdded = answers.Quantity;
+                    var IDOfProduct = answers.ID;
+                    restockInventory(IDOfProduct, quantityAdded)
+                    function restockInventory() {
+                        connection.query("SELECT * FROM products WHERE item_id = ?", [answers.ID]),
+                            connection.query("UPDATE products SET stock_quantity = ? WHERE item_id = ?", [answers.Quantity, answers.ID], function (err, res) {
+                                if (err) { console.log(err) };
+                                console.log("");
+                                console.log(chalk.blueBright("=================================================="));
+                                console.log(chalk.yellowBright("=== ") + chalk.magenta("Thank you! ") + chalk.greenBright("Product Quantity has been Added!") + chalk.yellowBright(" ==="));
+                                console.log(chalk.blueBright("=================================================="));
+                                console.log("");
+                                console.log("");
+                                console.log("");
+                                newTransaction();
+
+                            });
+                    }
+                })
+            }
             //=================================  List Of Transactions to be Perform ===============================           
             function newTransaction() {
                 inquirer.prompt([{
