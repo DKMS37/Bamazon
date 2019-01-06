@@ -1,6 +1,6 @@
 # BAMAZON
 
-Bamazon is an Amazon-like storefront app that will take in orders from customers and deplete stock from the store's inventory which is stored in MySql database. The app is also programmed to track products that is low in stock. Manager of the store can restock quantity add new products. And finally the app can track sales across the store's departments and then provide a summary of the highest-grossing departments in the store.
+Bamazon is an Amazon-like storefront app that will take in orders from customers and deplete stock from the store's inventory which is stored in MySql database. The app is also programmed to track products that is low in stock. Manager of the store can restock quantity and add new products. Finally the app can track sales across the store's departments and then provide a summary of the highest-grossing departments in the store.
 
 
 ## Submission Guide

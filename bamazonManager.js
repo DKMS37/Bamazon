@@ -65,6 +65,38 @@ function start() {
                     });
                 }
             }
+            else if (manager.input === '2.) View low inventory') {
+                var table = new Table({
+                    head: ["Item ID", "Current Product for Sale", "Stock Remaining"],
+                    colWidths: [10, 60, 20],
+                });
+                listlowInventory();
+                //================================= List Low Inventory  ===============================
+                function listlowInventory() {
+                    //Variable creation from DB connection
+                    connection.query("SELECT * FROM products WHERE stock_quantity <= 3", function (err, results) {
+                        for (var i = 0; i < results.length; i++) {
+
+                            var itemId = results[i].item_id,
+                                productName = results[i].product_name,
+                                stockQuantity = results[i].stock_quantity;
+
+                            table.push(
+                                [itemId, productName, stockQuantity]
+                            );
+                        }
+                        console.log("");
+                        console.log(chalk.blue("============================ ") + chalk.yellowBright("BAMAZON LOW PRODUCT INVENTORIES") + chalk.blue(" ================================="));
+                        console.log("");
+                        console.log(chalk.greenBright(table.toString()));
+                        console.log("");
+                        console.log("");
+                        console.log("");
+                        newTransaction();
+                        // connection.end();
+                    });
+                }
+            }
             //=================================  List Of Transactions to be Perform ===============================           
             function newTransaction() {
                 inquirer.prompt([{
@@ -90,4 +122,3 @@ function start() {
             }
         })
 }
-
