@@ -114,6 +114,7 @@ the following information will output to your terminal/bash window:
        * Would you like to perform another transaction?    
       ```
 If the manager Typed in "YES" and made the "2nd" selection "View low inventory", 
+any item which is "3" in quantity or below, 
 the following information will output to your terminal/bash window:
 
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_viewLowInventory_03.PNG)
@@ -157,12 +158,24 @@ the following information will output to your terminal/bash window:
         Stock Quantity: 0  
       ```
       AFTER:
-          ```
+      ```
        * "Item ID: 3
         "OFFICE 365 HOME & BUSINESS" 
         Stock Quantity: 5  
       ```     
     ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_database_lowInventory_Added_06.PNG)
+
+If the manager wants to check if the item did actually restock 
+and made the "2nd" selection again "View low Inventory". 
+The image BELOW shows that the item Restocked is now "GONE" 
+from the "BAMAZON LOW PRODUCT INVENTORY TABLE.
+
+   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_addMoreToInventory_confirmed_07.PNG)
+
+     
+
+
+
    
 
 
