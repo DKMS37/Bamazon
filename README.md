@@ -115,8 +115,9 @@ the following information will output to your terminal/bash window:
        * Would you like to perform another transaction?    
       ```
 If the manager Typed in "YES" and made the "2nd" selection "View low inventory", 
-any item which is "3" in quantity or below, 
-the following information will output to your terminal/bash window:
+
+the following information will output to your terminal/bash window,
+any item which have the stock remaining of "3" in quantity or below:
 
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_viewLowInventory_03.PNG)
 
