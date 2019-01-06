@@ -3,6 +3,26 @@
 Bamazon is an Amazon-like storefront app that will take in orders from customers and deplete stock from the store's inventory which is stored in MySql database. The app is also programmed to track products that is low in stock. Manager of the store can restock quantity and add new products. Finally the app can track sales across the store's departments and then provide a summary of the highest-grossing departments in the store.
 
 
+### What BAMAZON Can Do
+
+if BAMAZON takes the command or you type in the terminal below:
+`node bamazonCustomer.js`
+
+ * This will output the following information to your terminal/bash window:
+      ```
+       * Welcome to Bamazon! Would you like to view our current products fo sale?    
+      ```
+      if the user typed in "YES", the following information to your terminal/bash window:
+
+ ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonCustomer_1.PNG)
+
+ 
+
+
+
+
+
+
 ## Submission Guide
 
 Make sure you use the normal GitHub. Because this is a CLI App, there will be no need to deploy it to Heroku. This time, though, you need to include screenshots, a gif, and/or a video showing us that you got the app working with no bugs. You can include these screenshots or a link to a video in a `README.md` file.
