@@ -69,13 +69,15 @@ If the user input a unit number that is "LESS THAN" or "EQUAL" what the database
 
   * To verify that the app is working and communicating to the MySQL database, see the images below:
        ```
-       * "BEFORE" the order was completed the stock quantity on the MYSQL database were "8" in total as you can see on the image below:  
+       * "BEFORE" the order was completed the stock quantity on the MYSQL database were "8" in total 
+       as you can see on the image below:  
       ```
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonCustomer_4_database.PNG)
 
        ```
-       * "AFTER" the order was completed the stock quantity on the MYSQL database is "1" in total as you can see on the image below:  
-      ```
+       * "AFTER" the order was completed the stock quantity on the MYSQL database is "1" in total 
+       as you can see on the image below:  
+       ```
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonCustomer_4_database_minus.PNG)
 
 
