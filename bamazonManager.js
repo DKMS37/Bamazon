@@ -27,7 +27,7 @@ function start() {
     inquirer.prompt([{
         type: 'list',
         name: 'input',
-        message: 'Hello Manager, What would you like to do today?',
+        message: 'Hello Manager! What would you like to do today?',
         choices: ['1.) View Products for sale', '2.) View low inventory', '3.) Add to inventory', '4.) Add new product']
     }])
         .then(function (manager) {

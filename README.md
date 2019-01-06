@@ -5,6 +5,8 @@ Bamazon is an Amazon-like storefront app that will take in orders from customers
 
 ### What BAMAZON Can Do
 
+#### Bamazon Customer function:
+
 If BAMAZON takes the command or you type in the terminal below:
 `node bamazonCustomer.js`
 
@@ -54,7 +56,7 @@ If the user input a unit number that is "LESS THAN" or "EQUAL" what the database
       ```
        * Are you sure you would like to purchase this item and quantity?    
       ```
-      If the user answer is "YES", it will complete the order and will give a message:
+If the user answer is "YES", it will complete the order and will give a message:
       ```
        * Transaction completed. Thanks Alot! Come Again Soon.    
       ```
@@ -83,7 +85,37 @@ If the user input a unit number that is "LESS THAN" or "EQUAL" what the database
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonCustomer_4_database_minus.PNG)
 
 
-      
+#### Bamazon Manager function:
+
+If BAMAZON takes the command or you type in the terminal below:
+`node bamazonManager.js`
+
+ * This will output the following information to your terminal/bash window:
+      ```
+       * Hello Manager! What would you like to do today?    
+      ```
+      then it prompt the manager to 4 selection:
+      ```
+       * 1.) View Products for sale
+       * 2.) View low inventory 
+       * 3.) Add to inventory
+       * 4.) Add new product    
+      ```
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_selections_01.PNG)      
+
+If the manager made the "1st" selection "View Products for sale", 
+the following information will output to your terminal/bash window:
+
+  ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_viewProductsForSale_02.PNG)
+
+* And then the Bamazon App will automatically go back to prompt where it says:
+      ```
+       * Would you like to perform another transaction?    
+      ```
+
+
+
+
 
 
 
