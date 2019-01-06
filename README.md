@@ -108,7 +108,8 @@ the following information will output to your terminal/bash window:
 
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_viewProductsForSale_02.PNG)
 
-* And then the Bamazon App will automatically go back to prompt where it says: 
+ * And then the Bamazon App will automatically go back to prompt where it says:
+ 
       ```
        * Would you like to perform another transaction?    
       ```
@@ -117,8 +118,8 @@ the following information will output to your terminal/bash window:
 
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_viewLowInventory_03.PNG)
 
-* To verify that the app is working and communicating to the MySQL database, 
-compare the two images, the image UP and the image BELOW:
+ * To verify that the app is working and communicating to the MySQL database, 
+   compare the two images, the image UP and the image BELOW:
       ```
        * "Item ID: 3
         "OFFICE 365 HOME & BUSINESS" 
@@ -127,7 +128,7 @@ compare the two images, the image UP and the image BELOW:
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_database_lowInventory_04.PNG)    
 
 
-* And then the Bamazon App will automatically go back to prompt where it says:
+ * And then the Bamazon App will automatically go back to prompt where it says:
       ```
        * Would you like to perform another transaction?    
       ```  
@@ -135,6 +136,41 @@ If the manager Typed in "YES" and made the "3rd" selection "Add to inventory",
 the following information will output to your terminal/bash window:
 
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_addMoreToInventory_05.PNG)
+
+  * Bamazon App will automatically prompt the manager to two additional questions where it says:
+      ```
+       * What is the item id of the product you would like to restock?
+      ```
+      The manager can now choose whichever "Item ID" number in the "LOW INVENTORY TABLE",
+      Then After choosing, the manager can now answer the second prompt:
+       ```
+       * How many quantity you would like to add?
+      ```
+      HE/SHE can now input whatever quantity to add to the selected item.
+
+  * To verify that the app is working and communicating to the MySQL database, 
+    compare the two My SQL images, the image UP and the image BELOW:
+      BEFORE:
+      ```
+       * "Item ID: 3
+        "OFFICE 365 HOME & BUSINESS" 
+        Stock Quantity: 0  
+      ```
+      AFTER:
+          ```
+       * "Item ID: 3
+        "OFFICE 365 HOME & BUSINESS" 
+        Stock Quantity: 5  
+      ```     
+    ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_database_lowInventory_Added_06.PNG)
+   
+
+
+
+
+       
+
+
 
 
 
