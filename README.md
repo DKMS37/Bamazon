@@ -197,7 +197,7 @@ Bamazon app will prompt a message:
       ```  
 We can verify that everything works fine by looking at the two images below:
   
-  * this first image below shows we only have a total of "10" product_name
+  * this first image below shows we only have a total of "10" product_name.
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_database_addNewProduct_9.PNG)
   
   * this second image below shows we have now a total of "11" product_name 
@@ -210,7 +210,8 @@ We can verify that everything works fine by looking at the two images below:
       ```
        * Would you like to perform another transaction?    
       ```  
-If the manager type in "NO", Bamazon app will print the following to your terminal/bash window:
+If the manager type in "NO".
+  * Bamazon app will print the following to your terminal/bash window:
       ```
        * Thank You So Much! Wishing You A Wonderful Day!    
       ```  
