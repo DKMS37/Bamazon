@@ -108,8 +108,7 @@ the following information will output to your terminal/bash window:
 
   ![Image](https://github.com/DKMS37/Bamazon/blob/master/images/bamazonManager_viewProductsForSale_02.PNG)
 
-* And then the Bamazon App will automatically go back to prompt where it says:
-      
+* And then the Bamazon App will automatically go back to prompt where it says: 
       ```
        * Would you like to perform another transaction?    
       ```
@@ -120,7 +119,6 @@ the following information will output to your terminal/bash window:
 
 * To verify that the app is working and communicating to the MySQL database, 
 compare the two images, the image UP and the image BELOW:
-      
       ```
        * "Item ID: 3
         "OFFICE 365 HOME & BUSINESS" 
@@ -130,7 +128,6 @@ compare the two images, the image UP and the image BELOW:
 
 
 * And then the Bamazon App will automatically go back to prompt where it says:
-      
       ```
        * Would you like to perform another transaction?    
       ```  
